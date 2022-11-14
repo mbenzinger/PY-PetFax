@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+{% block title %}UserFax{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+ <h1>UserFax</h1>
+    {% for fact in facts %}
+        <h4>Submitted by {{fact.submitter}}</h4>
+        {{fact.fact}}
+    {% endfor %}
+{% endblock %}
